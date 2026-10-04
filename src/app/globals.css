@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 98%; /* Warm Ivory / Alabaster */
+    --foreground: 222 47% 11%; /* Midnight Obsidian */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 11%; /* Deep Royal Midnight */
+    --primary-foreground: 40 20% 98%;
+
+    --secondary: 38 42% 64%; /* Antique Champagne Gold */
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 36 20% 92%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 38 42% 64%; /* Champagne Gold */
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 36 15% 88%;
+    --input: 36 15% 88%;
+    --ring: 38 42% 64%;
+
+    --radius: 0.375rem;
+  }
+
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 40 20% 98%;
+
+    --card: 222 47% 10%;
+    --card-foreground: 40 20% 98%;
+
+    --popover: 222 47% 10%;
+    --popover-foreground: 40 20% 98%;
+
+    --primary: 40 20% 98%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 38 42% 64%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 38 42% 64%;
+    --accent-foreground: 40 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 38 42% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-gold-light selection:text-heritage-900;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif), 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Luxury Card & Border utilities */
+.royal-border {
+  border: 1px solid rgba(197, 168, 128, 0.3);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #A68656 0%, #D4AF37 50%, #C5A880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.royal-badge {
+  background: rgba(197, 168, 128, 0.12);
+  color: #8A6836;
+  border: 1px solid rgba(197, 168, 128, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
