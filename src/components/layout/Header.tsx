@@ -41,8 +41,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-heritage-100 shadow-sm">
       {/* Top Heritage Notice Bar */}
-      <div className="bg-heritage-900 text-heritage-100 py-1.5 px-4 text-xs font-medium border-b border-heritage-800">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div className="bg-heritage-900 text-heritage-100 py-1.5 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 text-xs font-medium border-b border-heritage-800">
+        <div className="w-full flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center space-x-3">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
             <span>Jaipur Ateliers Since 1990 • Urban Jaipur Fast Dispatch</span>
@@ -90,8 +90,8 @@ export function Header() {
         </div>
       </div>
 
-      {/* Main Nav Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Main Nav Bar (Full Screen Width) */}
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="flex items-center justify-between h-20">
           {/* Mobile menu button */}
           <div className="flex items-center lg:hidden">
@@ -131,7 +131,7 @@ export function Header() {
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium text-heritage-800">
+          <nav className="hidden lg:flex items-center space-x-5 xl:space-x-8 text-sm font-medium text-heritage-800">
             <Link href="/shop" className="hover:text-gold-dark transition">
               {t.nav.shop}
             </Link>
@@ -156,7 +156,7 @@ export function Header() {
           </nav>
 
           {/* Search, WhatsApp & Actions */}
-          <div className="flex items-center space-x-3 sm:space-x-5">
+          <div className="flex items-center space-x-3 sm:space-x-4 xl:space-x-6">
             {/* Desktop Search form */}
             <form onSubmit={handleSearchSubmit} className="hidden xl:flex items-center relative">
               <input
@@ -164,7 +164,7 @@ export function Header() {
                 placeholder={language === 'hi' ? 'खोजें (सूट, शेरवानी, कुर्ता)...' : 'Search suits, sherwanis, kurtas...'}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-56 pl-9 pr-3 py-1.5 text-xs bg-heritage-50 border border-heritage-200 rounded-full focus:outline-none focus:border-gold focus:w-64 transition-all"
+                className="w-56 xl:w-64 2xl:w-72 pl-9 pr-3 py-1.5 text-xs bg-heritage-50 border border-heritage-200 rounded-full focus:outline-none focus:border-gold focus:w-80 transition-all"
               />
               <Search className="w-4 h-4 text-heritage-500 absolute left-3 top-2 pointer-events-none" />
             </form>
