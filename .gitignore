@@ -19,7 +19,7 @@
 
 # Environment variables
 .env*.local
-.env
+.env.local
 
 # SQLite Databases & Journals
 *.db
